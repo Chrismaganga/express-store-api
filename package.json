@@ -2,10 +2,10 @@
   "name": "express-store-api",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "build": "webpack --config webpack.prod.js",
-  "dev": "nodemon --watch src --exec 'webpack --config webpack.dev.js' --quiet"
-},
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "nodemon --watch src --exec \"webpack --config webpack.dev.js\" --quiet"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

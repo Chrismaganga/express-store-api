@@ -1,8 +1,8 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
+import * as dotenv from 'dotenv';
 import productRoutes from './routes/productRoutes';
 import orderRoutes from './routes/orderRoutes';
-import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes';
+
 
 // Load environment variables from .env file
 dotenv.config();
@@ -16,10 +16,9 @@ app.use(express.json());
 // Route definitions
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
-app.use('/users', userRoutes);
 
 // Basic route for health check
-app.get('/', (_req, res) => {
+app.get('/', (_req: Request, res: Response) => {
     res.send('API is running');
 });
 
@@ -28,3 +27,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+export default app;
